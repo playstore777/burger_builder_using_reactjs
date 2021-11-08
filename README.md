@@ -1,3 +1,30 @@
+## Burger Builder using React.
+
+Did you ever wanted to have a burger with only meat or salad or cheese(really?😅)
+So, here you go my friend, this is Burger Builder, where you can build your own burger in affordable price!
+
+choose what you want and remove what you don't want, it also saves your money too!
+
+wondering how?
+because now you only have to pay for what you really want to eat, and remove all those salad veggies etc.
+
+So, you will enjoy your feast with your favorite feast(meat without veggies)
+and good thing is you don't need to pay for salad now, even though you never wanted that!
+
+isn't this budget effiecent and attractive?
+
+
+Here's the demo do give it a try!
+
+
+liked this project, don't forget to give it a Star🌟
+
+
+# Here are some Screenshots:
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
