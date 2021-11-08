@@ -14,16 +14,18 @@ and good thing is you don't need to pay for salad now, even though you never wan
 isn't this budget effiecent and attractive?
 
 
-Here's the demo do give it a try!
+#Here's the demo do give it a try!
 
+https://quizzical-lovelace-42282c.netlify.app/
 
 liked this project, don't forget to give it a Star🌟
 
 
 # Here are some Screenshots:
 
+![Home page][screenshots/Home_Screen.png]
 
-
+![Checkout page][screenshots/Checkout_Screen.png]
 
 # Getting Started with Create React App
 
