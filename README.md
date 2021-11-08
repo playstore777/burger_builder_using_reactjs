@@ -23,9 +23,9 @@ liked this project, don't forget to give it a Star🌟
 
 # Here are some Screenshots:
 
-![Home page][screenshots/Home_Screen.png]
+![Home page](screenshots/Home_Screen.png)
 
-![Checkout page][screenshots/Checkout_Screen.png]
+![Checkout page](screenshots/Checkout_Screen.png)
 
 # Getting Started with Create React App
 
