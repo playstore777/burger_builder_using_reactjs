@@ -2,21 +2,21 @@ import classes from "./Burger.module.css";
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 
 const burger = (props) => {
-    // console.log(
-    //     "what? ",
-    //     Object.keys(props.ingredients)
-    //         .map((igKey) => {
-    //             return [...Array(props.ingredients[igKey])].map((_, index) => (
-    //                 <BurgerIngredient key={igKey + index} type={igKey} />
-    //             ));
-    //         })
-    //         .reduce((arr, value) => {
-    //             console.log(arr);
-    //             return arr.concat(value);
-    //         }, [])
-    // );
+  // console.log(
+  //     "what? ",
+  //     Object.keys(props.ingredients)
+  //         .map((igKey) => {
+  //             return [...Array(props.ingredients[igKey])].map((_, index) => (
+  //                 <BurgerIngredient key={igKey + index} type={igKey} />
+  //             ));
+  //         })
+  //         .reduce((arr, value) => {
+  //             console.log(arr);
+  //             return arr.concat(value);
+  //         }, [])
+  // );
 
-    /*
+  /*
     here below,
     1) Object.keys gives an array of keys [salad, cheese...]
 
@@ -36,28 +36,32 @@ const burger = (props) => {
     4) We use reduce function to convert all into one single array, instead of nested arrays.
     all_the_above_code.reduce((arr, nestedArrayValue) => arr.concate(nestedArrayValue), []) this second arg, empty array is arr.
     */
-    const transformedIngredients = Object.keys(props.ingredients)
-        .map((igKey) => {
-            return [...Array(props.ingredients[igKey])].map((_, index) => (
-                <BurgerIngredient key={igKey + index} type={igKey} />
-            ));
-        })
-        // here when there is no object still Array will be of length 4 -> [Array(0), Array(0), Array(0), Array(0)]
-        // because in elements/nested arrays will have the values, they will be empty if there is no element, so, we will never know whether our array is empty or not to show some kinda prompt to add the elements.
-        // So, we reduce it to one single array, if there are no elements then it will be empty else.
-        .reduce((arr, ele) => {
-            return arr.concat(ele);
-        }, []);
+  // const transformedIngredients = Object.keys(props.ingredients)
+  //     .map((igKey) => {
+  //         return [...Array(props.ingredients[igKey])].map((_, index) => (
+  //             <BurgerIngredient key={igKey + index} type={igKey} />
+  //         ));
+  //     })
+  const transformedIngredients = props.UI_ingredients
+    .map((igKey, index) => {
+      return <BurgerIngredient key={igKey + index} type={igKey} />;
+    })
+    // here when there is no object still Array will be of length 4 -> [Array(0), Array(0), Array(0), Array(0)]
+    // because in elements/nested arrays will have the values, they will be empty if there is no element, so, we will never know whether our array is empty or not to show some kinda prompt to add the elements.
+    // So, we reduce it to one single array, if there are no elements then it will be empty else.
+    // .reduce((arr, ele) => {
+    //   return arr.concat(ele);
+    // }, []);
 
-    return (
-        <div className={classes.Burger}>
-            <BurgerIngredient type="bread-top" />
-            {transformedIngredients.length < 1
-                ? "Please add ingredients"
-                : transformedIngredients}
-            <BurgerIngredient type="bread-bottom" />
-        </div>
-    );
+  return (
+    <div className={classes.Burger}>
+      <BurgerIngredient type="bread-top" />
+      {transformedIngredients.length < 1
+        ? "Please add ingredients"
+        : transformedIngredients}
+      <BurgerIngredient type="bread-bottom" />
+    </div>
+  );
 };
 
 export default burger;
